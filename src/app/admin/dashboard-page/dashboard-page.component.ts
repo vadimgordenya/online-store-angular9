@@ -12,6 +12,7 @@ export class DashboardPageComponent implements OnInit {
   products = []
   pSub: Subscription
   rSub: Subscription
+  productName: string
 
   constructor(
     private productServ: ProductService
@@ -19,7 +20,6 @@ export class DashboardPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.pSub = this.productServ.getAll().subscribe(products => {
-      console.log(products)
       this.products = products
     })
   }
