@@ -11,6 +11,7 @@ import { Product } from '../shared/interfaces';
 export class ProductService {
 
   type = 'Phone'
+  cartProducts: Product[] = []
 
   constructor(
     private http: HttpClient
@@ -61,5 +62,10 @@ export class ProductService {
 
   setType(type: string) {
     this.type = type
+  }
+
+  addProduct(product) {
+    this.cartProducts.push(product)
+    console.log(this.cartProducts)
   }
 }
