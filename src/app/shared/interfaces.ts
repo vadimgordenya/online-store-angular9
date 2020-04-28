@@ -8,5 +8,6 @@ export interface Product {
   title?: string,
   info?: string,
   price?: string,
+  photo?: string,
   date?: Date
 }
